@@ -28,7 +28,7 @@ export default function Projects() {
       <h1 className="text-3xl mb-6 text-center font-semibold text-[#5651e5]">
         Projects
       </h1>
-      <div className="grid grid-cols-2 gap-8">
+      <div className="flex justify-center items-center">
         {projects.map((project: Projects, index: number) => (
           <Card
             key={index}
