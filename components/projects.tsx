@@ -52,8 +52,8 @@ export default function Projects() {
                     src={project.image}
                     alt={project.image_alt}
                     className="rounded-xl hover:scale-105 duration-300"
-                    width={800}
-                    height={800}
+                    width={500}
+                    height={500}
                     priority
                   />
                 </Link>

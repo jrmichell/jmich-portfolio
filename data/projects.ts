@@ -1,5 +1,5 @@
 import CrimsonOrb from "@/public/assets/crimsonorb.png";
-import Helvera from "@/public/assets/helvera.png";
+import Helvera from "@/public/assets/helvera.jpeg";
 
 export const projects = [
   {
