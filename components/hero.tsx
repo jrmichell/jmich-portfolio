@@ -26,7 +26,7 @@ export default function Hero() {
         </motion.p>
         <motion.p
           variants={{ hidden: { opacity: 0, y: -100 }, visible }}
-          className="text-center text-sm sm:text-md lg:text-xl"
+          className="text-center text-muted-foreground text-sm sm:text-md lg:text-xl"
         >
           I am dedicated to learning emerging technologies and developing
           solutions that address practical issues in the real world.
