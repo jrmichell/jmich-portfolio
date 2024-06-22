@@ -53,6 +53,7 @@ export default function Projects() {
                       className="rounded-xl"
                       width={700}
                       height={700}
+                      priority
                     />
                   </Link>
                 </CardContent>
