@@ -8,13 +8,6 @@ import {
   CardDescription,
   CardFooter,
 } from "./ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "./ui/carousel";
 
 import { projects } from "@/data/projects";
 import Image from "next/image";
@@ -35,42 +28,39 @@ export default function Projects() {
       <h1 className="text-3xl mb-6 text-center font-semibold text-[#5651e5]">
         Projects
       </h1>
-      <Carousel opts={{ align: "center" }}>
-        <CarouselPrevious />
-        <CarouselContent className="text-center text-muted-foreground">
-          {projects.map((project: Projects, index: number) => (
-            <CarouselItem key={index} className="flex flex-col gap-4">
-              <Card>
-                <CardHeader>
-                  <CardTitle>{project.title}</CardTitle>
-                  <CardDescription>{project.description}</CardDescription>
-                </CardHeader>
-                <CardContent className="flex justify-center items-center">
-                  <Link href={project.website_link} target="_blank">
-                    <Image
-                      src={project.image}
-                      alt={project.image_alt}
-                      className="rounded-xl"
-                      width={700}
-                      height={700}
-                      priority
-                    />
-                  </Link>
-                </CardContent>
-                <CardFooter className="flex justify-center items-center">
-                  <Link
-                    href={project.github_link}
-                    className="text-[#5651e5] hover:underline"
-                  >
-                    GitHub Repository ➜
-                  </Link>
-                </CardFooter>
-              </Card>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselNext />
-      </Carousel>
+      <div className="grid grid-cols-2 gap-8">
+        {projects.map((project: Projects, index: number) => (
+          <Card
+            key={index}
+            className="flex flex-col justify-center items-center"
+          >
+            <CardHeader className="text-center">
+              <CardTitle>{project.title}</CardTitle>
+              <CardDescription>{project.description}</CardDescription>
+            </CardHeader>
+            <CardContent className="flex justify-center items-center">
+              <Link href={project.website_link} target="_blank">
+                <Image
+                  src={project.image}
+                  alt={project.image_alt}
+                  className="rounded-xl hover:scale-105 duration-300"
+                  width={800}
+                  height={800}
+                  priority
+                />
+              </Link>
+            </CardContent>
+            <CardFooter className="flex justify-center items-center">
+              <Link
+                href={project.github_link}
+                className="text-[#5651e5] hover:underline"
+              >
+                GitHub Repository ➜
+              </Link>
+            </CardFooter>
+          </Card>
+        ))}
+      </div>
     </>
   );
 }
