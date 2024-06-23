@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { FaGithub, FaTwitch, FaLinkedin } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
 
 export default function Hero() {
   const visible = { opacity: 1, y: 0, transition: { duration: 0.8 } };
@@ -76,6 +77,17 @@ export default function Hero() {
             >
               <div className="rounded-full shadow-lg p-6 cursor-pointer">
                 <FaGithub size={20} />
+              </div>
+            </Link>
+          </motion.div>
+          <motion.div
+            variants={{ hidden: { opacity: 0, y: -100 }, visible }}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+          >
+            <Link href="/contact" rel="noreferrer">
+              <div className="rounded-full shadow-lg p-6 cursor-pointer">
+                <AiOutlineMail size={20} />
               </div>
             </Link>
           </motion.div>

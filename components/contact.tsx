@@ -4,12 +4,11 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaGithub, FaTwitch, FaLinkedin } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
 import Link from "next/link";
 
 export default function Contact() {
@@ -33,7 +32,7 @@ export default function Contact() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <motion.div className="w-full flex items-center justify-center gap-8">
+            <motion.div className="w-full flex items-center justify-center gap-0 md:gap-8">
               <motion.div
                 variants={{ hidden: { opacity: 0, y: -100 }, visible }}
                 whileHover={{ scale: 1.2 }}
@@ -76,6 +75,17 @@ export default function Contact() {
                 >
                   <div className="rounded-full shadow-lg p-6 cursor-pointer">
                     <FaGithub size={20} />
+                  </div>
+                </Link>
+              </motion.div>
+              <motion.div
+                variants={{ hidden: { opacity: 0, y: -100 }, visible }}
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.8 }}
+              >
+                <Link href="/contact" rel="noreferrer">
+                  <div className="rounded-full shadow-lg p-6 cursor-pointer">
+                    <AiOutlineMail size={20} />
                   </div>
                 </Link>
               </motion.div>
