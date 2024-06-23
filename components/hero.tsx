@@ -36,7 +36,7 @@ export default function Hero() {
         <motion.div className="w-full flex items-center justify-center py-4 gap-8">
           <motion.div
             variants={{ hidden: { opacity: 0, y: -100 }, visible }}
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.8 }}
           >
             <Link
@@ -51,7 +51,7 @@ export default function Hero() {
           </motion.div>
           <motion.div
             variants={{ hidden: { opacity: 0, y: -100 }, visible }}
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.8 }}
           >
             <Link
@@ -66,7 +66,7 @@ export default function Hero() {
           </motion.div>
           <motion.div
             variants={{ hidden: { opacity: 0, y: -100 }, visible }}
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.8 }}
           >
             <Link
