@@ -11,13 +11,11 @@ export default function Navbar() {
         <Link href="/">
           <Image src={Logo} alt="Logo" width={50} height={50} priority />
         </Link>
-        <Button variant="outline">
-          <Link href="/" className="uppercase">
-            Home
-          </Link>
+        <Button variant="outline" className="uppercase">
+          <Link href="/">Home</Link>
         </Button>
-        <Button variant="outline" className="text-muted-foreground uppercase">
-          Contact
+        <Button variant="outline" className="uppercase">
+          <Link href="/contact">Contact</Link>
         </Button>
         <div className="fixed right-4">
           <ModeToggle />
