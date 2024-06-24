@@ -61,6 +61,7 @@ export default function Projects() {
               <CardFooter className="flex justify-center items-center">
                 <Link
                   href={project.github_link}
+                  target="_blank"
                   className="text-[#5651e5] hover:underline"
                 >
                   GitHub Repository ➜
