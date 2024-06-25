@@ -7,6 +7,7 @@ import { AiOutlineMail } from "react-icons/ai";
 
 export default function Hero() {
   const visible = { opacity: 1, y: 0, transition: { duration: 0.8 } };
+  const hidden = { opacity: 0, y: -100 };
 
   return (
     <AnimatePresence>
@@ -16,19 +17,19 @@ export default function Hero() {
         exit={{ opacity: 0, transition: { duration: 1 } }}
       >
         <motion.h1
-          variants={{ hidden: { opacity: 0, y: -100 }, visible }}
+          variants={{ hidden, visible }}
           className="text-center text-6xl sm:text-8xl lg:text-9xl font-bold text-[#5651e5]"
         >
           Jack Michell
         </motion.h1>
         <motion.p
-          variants={{ hidden: { opacity: 0, y: -100 }, visible }}
+          variants={{ hidden, visible }}
           className="text-center text-3xl sm:text-5xl lg:text-7xl"
         >
           Software Engineer
         </motion.p>
         <motion.p
-          variants={{ hidden: { opacity: 0, y: -100 }, visible }}
+          variants={{ hidden, visible }}
           className="text-center text-muted-foreground text-sm sm:text-md lg:text-xl"
         >
           I am dedicated to learning emerging technologies and developing
@@ -36,7 +37,7 @@ export default function Hero() {
         </motion.p>
         <motion.div className="w-full flex items-center justify-center py-4 gap-8">
           <motion.div
-            variants={{ hidden: { opacity: 0, y: -100 }, visible }}
+            variants={{ hidden, visible }}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.8 }}
           >
@@ -51,7 +52,7 @@ export default function Hero() {
             </Link>
           </motion.div>
           <motion.div
-            variants={{ hidden: { opacity: 0, y: -100 }, visible }}
+            variants={{ hidden, visible }}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.8 }}
           >
@@ -66,7 +67,7 @@ export default function Hero() {
             </Link>
           </motion.div>
           <motion.div
-            variants={{ hidden: { opacity: 0, y: -100 }, visible }}
+            variants={{ hidden, visible }}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.8 }}
           >
@@ -81,7 +82,7 @@ export default function Hero() {
             </Link>
           </motion.div>
           <motion.div
-            variants={{ hidden: { opacity: 0, y: -100 }, visible }}
+            variants={{ hidden, visible }}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.8 }}
           >

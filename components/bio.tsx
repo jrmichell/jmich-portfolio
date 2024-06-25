@@ -6,8 +6,10 @@ export default function Bio() {
       <h1 className="text-3xl mb-6 text-center font-semibold text-[#5651e5]">
         About Me
       </h1>
-      <Card className="mb-16">
-        <CardHeader></CardHeader>
+      <Card className="text-center">
+        <CardHeader>
+          <CardTitle>Introduction</CardTitle>
+        </CardHeader>
         <CardContent>
           <p className="text-muted-foreground">
             I am a first year Computer Science major based in the United States.
