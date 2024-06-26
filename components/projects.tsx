@@ -32,6 +32,17 @@ interface Projects {
 }
 
 export default function Projects() {
+  // if there is more than one project, on mobile add a message saying to swipe
+  const isMobile = () => {
+    if (projects.length > 1) {
+      return (
+        <p className="text-center text-[#5651e5] text-sm">
+          Swipe to see more projects
+        </p>
+      );
+    }
+  };
+
   return (
     <AnimatePresence>
       <motion.div
@@ -45,7 +56,7 @@ export default function Projects() {
         </h1>
         <div className="flex flex-col xl:flex-row justify-center items-center gap-8">
           <Carousel>
-            <CarouselPrevious />
+            <CarouselPrevious className="hidden md:flex justify-center item-center" />
             <CarouselContent>
               {projects.map((project: Projects, index: number) => (
                 <CarouselItem key={index}>
@@ -79,7 +90,10 @@ export default function Projects() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselNext />
+            <CarouselNext className="hidden md:flex justify-center item-center" />
+            <p className="md:hidden flex justify-center items-center text-muted-foreground mt-4">
+              Swipe to see more!
+            </p>
           </Carousel>
         </div>
       </motion.div>
