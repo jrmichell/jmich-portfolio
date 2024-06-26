@@ -32,17 +32,6 @@ interface Projects {
 }
 
 export default function Projects() {
-  // if there is more than one project, on mobile add a message saying to swipe
-  const isMobile = () => {
-    if (projects.length > 1) {
-      return (
-        <p className="text-center text-[#5651e5] text-sm">
-          Swipe to see more projects
-        </p>
-      );
-    }
-  };
-
   return (
     <AnimatePresence>
       <motion.div
