@@ -8,6 +8,13 @@ import {
   CardDescription,
   CardFooter,
 } from "./ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./ui/carousel";
 
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -37,38 +44,43 @@ export default function Projects() {
           Projects
         </h1>
         <div className="flex flex-col xl:flex-row justify-center items-center gap-8">
-          {projects.map((project: Projects, index: number) => (
-            <Card
-              key={index}
-              className="flex flex-col justify-center items-center"
-            >
-              <CardHeader className="text-center">
-                <CardTitle>{project.title}</CardTitle>
-                <CardDescription>{project.description}</CardDescription>
-              </CardHeader>
-              <CardContent className="flex justify-center items-center">
-                <Link href={project.website_link} target="_blank">
-                  <Image
-                    src={project.image}
-                    alt={project.image_alt}
-                    className="rounded-xl hover:scale-105 duration-300"
-                    width={500}
-                    height={500}
-                    priority
-                  />
-                </Link>
-              </CardContent>
-              <CardFooter className="flex justify-center items-center">
-                <Link
-                  href={project.github_link}
-                  target="_blank"
-                  className="text-[#5651e5] hover:underline"
-                >
-                  GitHub Repository ➜
-                </Link>
-              </CardFooter>
-            </Card>
-          ))}
+          <Carousel>
+            <CarouselPrevious />
+            <CarouselContent>
+              {projects.map((project: Projects, index: number) => (
+                <CarouselItem key={index}>
+                  <Card className="flex flex-col justify-center items-center">
+                    <CardHeader className="text-center">
+                      <CardTitle>{project.title}</CardTitle>
+                      <CardDescription>{project.description}</CardDescription>
+                    </CardHeader>
+                    <CardContent className="flex justify-center items-center">
+                      <Link href={project.website_link} target="_blank">
+                        <Image
+                          src={project.image}
+                          alt={project.image_alt}
+                          className="rounded-xl hover:scale-105 duration-300"
+                          width={500}
+                          height={500}
+                          priority
+                        />
+                      </Link>
+                    </CardContent>
+                    <CardFooter className="flex justify-center items-center">
+                      <Link
+                        href={project.github_link}
+                        target="_blank"
+                        className="text-[#5651e5] hover:underline"
+                      >
+                        GitHub Repository ➜
+                      </Link>
+                    </CardFooter>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselNext />
+          </Carousel>
         </div>
       </motion.div>
     </AnimatePresence>
