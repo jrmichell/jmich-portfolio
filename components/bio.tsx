@@ -16,6 +16,5 @@ export default function Bio() {
           passion and use it to create software that will benefit the world.
         </p>
       </CardContent>
-    </Card>
   );
 }
