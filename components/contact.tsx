@@ -13,6 +13,7 @@ import Link from "next/link";
 
 export default function Contact() {
   const visible = { opacity: 1, y: 0, transition: { duration: 0.8 } };
+  const hidden = { opacity: 0, y: -100 };
 
   return (
     <AnimatePresence>
@@ -34,7 +35,7 @@ export default function Contact() {
           <CardContent>
             <motion.div className="w-full flex items-center justify-center gap-0 md:gap-8">
               <motion.div
-                variants={{ hidden: { opacity: 0, y: -100 }, visible }}
+                variants={{ hidden, visible }}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.8 }}
               >
@@ -49,7 +50,7 @@ export default function Contact() {
                 </Link>
               </motion.div>
               <motion.div
-                variants={{ hidden: { opacity: 0, y: -100 }, visible }}
+                variants={{ hidden, visible }}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.8 }}
               >
@@ -64,7 +65,7 @@ export default function Contact() {
                 </Link>
               </motion.div>
               <motion.div
-                variants={{ hidden: { opacity: 0, y: -100 }, visible }}
+                variants={{ hidden, visible }}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.8 }}
               >
@@ -79,7 +80,7 @@ export default function Contact() {
                 </Link>
               </motion.div>
               <motion.div
-                variants={{ hidden: { opacity: 0, y: -100 }, visible }}
+                variants={{ hidden, visible }}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.8 }}
               >
