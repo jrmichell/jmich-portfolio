@@ -6,8 +6,8 @@ import { Button } from "./ui/button";
 
 export default function Navbar() {
   return (
-    <div className="fixed z-50 bg-background w-full py-2">
-      <div className="flex justify-start items-center mx-8 gap-6">
+    <div className="fixed z-50 bg-background w-full ml-4 py-2">
+      <div className="flex justify-start items-center gap-4">
         <Link href="/">
           <Image src={Logo} alt="Logo" width={50} height={50} priority />
         </Link>

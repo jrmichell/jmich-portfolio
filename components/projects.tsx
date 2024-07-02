@@ -44,7 +44,7 @@ export default function Projects() {
           Projects
         </h1>
         <div className="flex flex-col xl:flex-row justify-center items-center gap-8">
-          <Carousel>
+          <Carousel className="w-full">
             <CarouselPrevious className="hidden md:flex justify-center item-center" />
             <CarouselContent>
               {projects.map((project: Projects, index: number) => (
