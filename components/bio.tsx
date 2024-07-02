@@ -1,10 +1,17 @@
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
 
 export default function Bio() {
   return (
     <Card className="text-center flex flex-col justify-center items-center">
       <CardHeader>
         <CardTitle>Introduction</CardTitle>
+        <CardDescription>Who I Am</CardDescription>
       </CardHeader>
       <CardContent>
         <p className="text-muted-foreground">
