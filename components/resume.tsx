@@ -28,7 +28,7 @@ export default function Resume() {
             </CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col justify-center items-center gap-4">
-            <div className="hidden md:flex">
+            <div className="hidden xl:flex">
               <PdfViewer />
             </div>
             <Button variant="outline">
