@@ -1,6 +1,7 @@
 import About from "@/components/about";
 import Contact from "@/components/contact";
 import Hero from "@/components/hero";
+import DotPattern from "@/components/magicui/dot-pattern";
 import Projects from "@/components/projects";
 
 export default function Home() {

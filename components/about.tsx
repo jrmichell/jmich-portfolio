@@ -16,7 +16,7 @@ export default function About() {
         <h1 className="text-3xl mb-6 text-center font-semibold text-[#5651e5]">
           About Me
         </h1>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div className="flex flex-col justify-center items-center gap-8">
           <Bio />
           <TechStack />
         </div>

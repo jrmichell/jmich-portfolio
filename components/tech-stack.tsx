@@ -1,3 +1,4 @@
+import IconCloud from "./magicui/icon-cloud";
 import {
   Card,
   CardContent,
@@ -16,26 +17,26 @@ export default function TechStack() {
         </CardDescription>
       </CardHeader>
       <CardContent className="text-muted-foreground">
-        <p className="mb-2 text-center">
+        <p className="mb-4 text-center">
           I am consistently seeking opportunities to learn and broaden my
           expertise, striving to enhance my knowledge and skills in various
           domains.
         </p>
-        <p className="mb-2 text-center">
-          I have experience with a variety of technologies, including:
-        </p>
-        <ul className="flex flex-row justify-center items-center gap-8 list-disc">
-          <div>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </div>
-          <div>
-            <li>TypeScript</li>
-            <li>React</li>
-            <li>TailwindCSS</li>
-          </div>
-        </ul>
+        <IconCloud
+          iconSlugs={[
+            "javascript",
+            "typescript",
+            "react",
+            "tailwindcss",
+            "nodejs",
+            "express",
+            "mongodb",
+            "postgresql",
+            "git",
+            "github",
+            "python",
+          ]}
+        />
       </CardContent>
     </Card>
   );
