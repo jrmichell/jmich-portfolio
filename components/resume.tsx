@@ -23,17 +23,14 @@ export default function Resume() {
         <Card className="flex flex-col justify-center items-center">
           <CardHeader>
             <CardDescription className="text-center">
-              Here you can view or download my resume and get a better idea of
-              my experience.
+              Here you can download my resume and get a better idea of my
+              experience.
             </CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col justify-center items-center gap-4">
-            <div className="hidden xl:flex">
-              <PdfViewer />
-            </div>
             <Button variant="outline">
               <a href={path} download={fileName}>
-                Download
+                Download Resume
               </a>
             </Button>
           </CardContent>
