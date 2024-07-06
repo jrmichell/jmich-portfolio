@@ -1,6 +1,5 @@
 "use client";
 
-import PdfViewer from "./pdfviewer";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardDescription, CardHeader } from "./ui/card";
 import { motion, AnimatePresence } from "framer-motion";
