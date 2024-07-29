@@ -76,7 +76,7 @@ export default function Projects() {
                   </CardFooter>
                 </Card>
                 <p className="md:hidden flex justify-center items-center text-muted-foreground mt-4">
-                  Swipe to see more!
+                  More coming soon!
                 </p>
               </CarouselItem>
             ))}

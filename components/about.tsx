@@ -3,7 +3,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Bio from "./bio";
 import TechStack from "./tech-stack";
-import Resume from "./resume";
 
 export default function About() {
   return (
