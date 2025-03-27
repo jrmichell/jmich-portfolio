@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/public/assets/logo.png";
 import { ModeToggle } from "./mode-toggle";
-import { Button } from "./ui/button";
 
 export default function Navbar() {
   return (
@@ -10,16 +9,6 @@ export default function Navbar() {
       <div className="flex justify-start items-center gap-4">
         <Link href="/">
           <Image src={Logo} alt="Logo" width={50} height={50} priority />
-        </Link>
-        <Link href="/">
-          <Button variant="outline" className="uppercase">
-            Home
-          </Button>
-        </Link>
-        <Link href="/contact">
-          <Button variant="outline" className="uppercase">
-            Contact
-          </Button>
         </Link>
         <div className="fixed right-4">
           <ModeToggle />

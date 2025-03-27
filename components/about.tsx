@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import Bio from "./bio";
-import TechStack from "./tech-stack";
+import Technologies from "./tech-stack";
 
 export default function About() {
   return (
@@ -18,7 +18,7 @@ export default function About() {
         </h1>
         <div className="flex flex-col justify-center items-center gap-8">
           <Bio />
-          <TechStack />
+          <Technologies />
         </div>
       </motion.div>
     </AnimatePresence>

@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { FaGithub, FaTwitch, FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { FadeText } from "./magicui/fade-text";
 import { Dock } from "./magicui/dock";
@@ -26,50 +26,31 @@ export default function Hero() {
         </motion.h1>
         <motion.div
           variants={{ hidden, visible }}
-          className="text-center text-3xl sm:text-5xl lg:text-7xl"
-        >
-          <FadeText text="Software Engineer" direction="down" />
-        </motion.div>
-        <motion.div
-          variants={{ hidden, visible }}
-          className="text-center text-muted-foreground text-sm sm:text-md lg:text-xl"
+          className="mt-2 text-center text-muted-foreground text-sm sm:text-md lg:text-xl"
         >
           <FadeText
             text="I am dedicated to learning emerging technologies and developing
-          solutions that address practical issues in the real world"
+          solutions that address real world problems"
             direction="down"
           />
         </motion.div>
 
         <motion.div variants={{ hidden, visible }}>
-          <Dock className="flex justify-center items-center p-8 gap-4">
+          <Dock className="flex justify-center items-center p-8 mt-4">
             <motion.div className="w-full flex items-center justify-center gap-8">
-              <motion.div
-                variants={{ hidden, visible }}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.8 }}
-              >
-                <Link
-                  href="https://www.linkedin.com/in/jack-michell/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaLinkedin size={20} />
-                </Link>
-              </motion.div>
-              <motion.div
-                variants={{ hidden, visible }}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.8 }}
-              >
-                <Link
-                  href="https://twitch.tv/Jack2xDev"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaTwitch size={20} />
-                </Link>
-              </motion.div>
+              {/* <motion.div */}
+              {/*   variants={{ hidden, visible }} */}
+              {/*   whileHover={{ scale: 1.2 }} */}
+              {/*   whileTap={{ scale: 0.8 }} */}
+              {/* > */}
+              {/*   <Link */}
+              {/*     href="https://www.linkedin.com/in/jack-michell/" */}
+              {/*     target="_blank" */}
+              {/*     rel="noreferrer" */}
+              {/*   > */}
+              {/*     <FaLinkedin size={20} /> */}
+              {/*   </Link> */}
+              {/* </motion.div> */}
               <motion.div
                 variants={{ hidden, visible }}
                 whileHover={{ scale: 1.2 }}
@@ -88,7 +69,7 @@ export default function Hero() {
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.8 }}
               >
-                <Link href="/contact" rel="noreferrer">
+                <Link href="mailto:jmichell2003@gmail.com" rel="noreferrer">
                   <AiOutlineMail size={20} />
                 </Link>
               </motion.div>

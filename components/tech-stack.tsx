@@ -7,13 +7,13 @@ import {
   CardTitle,
 } from "./ui/card";
 
-export default function TechStack() {
+export default function Technologies() {
   return (
     <Card className="flex flex-col justify-center items-center">
       <CardHeader>
         <CardTitle className="text-center">Technologies</CardTitle>
         <CardDescription className="text-center">
-          What I Work With
+          What I Am Learning & Working With
         </CardDescription>
       </CardHeader>
       <CardContent className="text-muted-foreground">
@@ -29,12 +29,10 @@ export default function TechStack() {
             "react",
             "tailwindcss",
             "nodejs",
-            "express",
-            "mongodb",
-            "postgresql",
             "git",
             "github",
             "python",
+            "c",
           ]}
         />
       </CardContent>
